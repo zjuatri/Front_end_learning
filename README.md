@@ -1,4 +1,4 @@
-## Welcome to zjuatri's note of front-end learning.
+## Welcome to zjuatri's notes of front-end learning.
 |Concept|Behaviour|
 | ---- | ---- |
 | HTML | Structure |
