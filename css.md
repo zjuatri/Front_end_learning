@@ -88,3 +88,42 @@ justify-content:space-evenly
 ![](j_space-between.png)
 ![](j_space-around.png)
 ![](j_space-evenly.png)
+### `flex-wrap`
+```css
+.container{
+    display:flex;
+    width:500px;
+    height:300px;
+    flex-wrap:wrap;
+}
+.item{
+    flex-basis:200px;
+}
+```
+![](wrap.png)
+`flex-wrap:wrap-reverse`
+![](wrap-reverse.png)
+### `align-content`
+```css
+align-content:flex-start
+align-content:flex-end
+align-content:space-around
+```
+![](ac_flex-start.png)
+![](ac_flex-end.png)
+![](ac_space-around.png)
+
+### `order`
+```css
+.item:nth-child(1){
+    order:3
+}
+
+.item:nth-child(2){
+    order:2
+}
+
+.item:nth-child(3){
+    order:1
+}
+```
