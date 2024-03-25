@@ -53,6 +53,7 @@ flex:1 0px;
 /*devide into equal parts*/
 ```
 ### `align-items`
+manipulate cross axis
 ```css
 .container{
     display:flex;
@@ -67,3 +68,23 @@ align-items:flex-end;
 align-items:center;
 align-items:baseline;
 ```
+![](a_flex-start.png)
+![](a_flex-end.png)
+![](a_center.png)
+![](a_baseline.png)
+### `justify-content`
+manipulate the main axis
+```css
+justify-content:flex-start
+justify-content:flex-end
+justify-content:center
+justify-content:space-between
+justify-content:space-around
+justify-content:space-evenly
+```
+![](j_flex-start.png)
+![](j_flex-end.png)
+![](j_center.png)
+![](j_space-between.png)
+![](j_space-around.png)
+![](j_space-evenly.png)
