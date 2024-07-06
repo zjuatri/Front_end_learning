@@ -135,9 +135,9 @@ int fibonacci(int n) {
 
 var result = fibonacci(20);
 ```
-#### optional parameters
+#### optional parameters/named parameters
 Named parameters are optional unless they're explicitly marked as `required`.
-If you don't provide a default value or mark a named parameter as required, their types must be nullable as their default value will be null:
+When defining a function, use {param1, param2, …} to specify named parameters. If you don't provide a default value or mark a named parameter as required, their types must be nullable as their default value will be null:
 ```dart
 void enableFlags({bool? bold, bool? hidden}) {...}
 
@@ -246,5 +246,18 @@ class Point {
 
   // OK, `this.x` and `this.y` are parameter declarations, not expressions:
   Point(this.x, this.y);
+}
+```
+#### Redirecting constructors
+A constructor might redirect to another constructor in the same class. A redirecting constructor has an empty body. The constructor uses this instead of the class name after a colon ( : ).
+```dart
+class Point {
+  double x, y;
+
+  // The main constructor for this class.
+  Point(this.x, this.y);
+
+  // Delegates to the main constructor.
+  Point.alongXAxis(double x) : this(x, 0);
 }
 ```
