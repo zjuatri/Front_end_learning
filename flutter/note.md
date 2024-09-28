@@ -180,6 +180,29 @@ for (var item in uppercaseList) {
 import 'dart:math';
 ```
 ### Class
+#### 默认构造函数和命名构造函数
+```dart
+class Person{
+  String name;
+  int age;
+  
+  Person(String name, int age){
+    this.name = name;
+    this.age = age;
+  }
+  // The same as
+  // Person(this.name, this.age);
+  
+  Person.age(int age){
+    this.age = age;
+  }
+}
+
+void main(){
+  Person p1 = new Person('Eric',20);
+  Person p2 = new Person.age(20);
+}
+```
 Use ?. instead of . to avoid an exception when the leftmost operand is null:
 ```dart
 var p = Point(2, 2);
@@ -193,6 +216,8 @@ double distance = p.distanceTo(Point(4, 4));
 // If p is non-null, set a variable equal to its y value.
 var a = p?.y;
 ```
+#### 命名构造函数
+
 #### `getter` and `setter`
 getter: the function implements when you get the value of the very variable
 setter: the function implements when you set the value of the very variable
